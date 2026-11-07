@@ -70,7 +70,12 @@
       <p>Добавьте <code>nav</code> с классом <code>.menu</code> и три ссылки на задания этой страницы. Используйте адреса <code>#exercise-01</code>, <code>#exercise-02</code> и <code>#exercise-03</code>. Сделайте ссылки колонкой на узком экране и рядом от 600 px. Задайте промежуток между ними и внутренний отступ каждой ссылки через <code>rem</code>, например по <code>0.5rem</code>.</p>
       <p class="lab-check"><strong>Проверка.</strong> На 360 px ссылки стоят в столбик, на 600 px — в ряд. Нажатие переносит к нужному заданию.</p>
       <div class="lab-stage task-06">
-        <!-- 06. Добавьте меню здесь. -->
+        <nav class="menu">
+          <a href="#exercise-01">Задание 1</a>
+          <a href="#exercise-02">Задание 2</a>
+          <a href="#exercise-03">Задание 3</a>
+
+        </nav>
       </div>
     </section>
 
@@ -80,7 +85,14 @@
       <p>Добавьте контейнер <code>.catalog</code> и шесть карточек <code>.item</code> с короткими названиями. Используйте Flexbox с переносом строк или CSS Grid. Сделайте одну колонку по умолчанию, две от 600 px и три от 900 px. Между карточками оставьте 12 px.</p>
       <p class="lab-check"><strong>Проверка.</strong> На 360, 700 и 960 px в первой строке помещаются соответственно одна, две и три карточки. Карточки в каждой строке одинаковой ширины.</p>
       <div class="lab-stage task-07">
-        <!-- 07. Добавьте каталог здесь. -->
+        <div class="catalog">
+          <div class="item">item</div>
+          <div class="item">item</div>
+          <div class="item">item</div>
+          <div class="item">item</div>
+          <div class="item">item</div>
+          <div class="item">item</div>
+        </div>
       </div>
     </section>
 
@@ -90,7 +102,10 @@
       <p>Добавьте <code>figure</code> с классом <code>.photo</code>, вложите <code>img</code> и <code>figcaption</code>. Возьмите файл <code>mountains.svg</code> из папки проекта и добавьте изображению осмысленный <code>alt</code>. Уберите стандартные внешние отступы у <code>figure</code>. На узком экране картинка должна занимать всю ширину блока. От 700 px поставьте подпись рядом с изображением, которому отведите 55% ширины блока.</p>
       <p class="lab-check"><strong>Проверка.</strong> На 360 px подпись под картинкой, на 700 px — справа. Картинка сохраняет пропорции и не выходит за рамку.</p>
       <div class="lab-stage task-08">
-        <!-- 08. Добавьте изображение и подпись здесь. -->
+        <figure class="photo">
+          <img src="mountains.svg" alt="Горы и солнце">
+          <figcaption>Горы на рассвете.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -100,7 +115,10 @@
       <p>Добавьте блок <code>.hero</code> с заголовком <code>h3</code> и коротким абзацем. Задайте блоку минимальную высоту <code>35vh</code> и отцентрируйте содержимое с помощью Flexbox. Сделайте размер заголовка равным <code>6vw</code>, но ограничьте его снизу 24 px, а сверху 56 px. Для ограничения пригодится <code>clamp(минимум, желаемый размер, максимум)</code>.</p>
       <p class="lab-check"><strong>Проверка.</strong> На 360 px заголовок имеет размер 24 px, на 600 px — 36 px, на 1000 px — 56 px. Высота блока меняется при изменении высоты окна.</p>
       <div class="lab-stage task-09">
-        <!-- 09. Добавьте первый экран здесь. -->
+        <div class="hero">
+          <h3>Неделя в горах</h3>
+          <p>Путеводитель по маршрутам.</p>
+        </div>
       </div>
     </section>
 
@@ -116,7 +134,39 @@
       </ul>
       <p class="lab-check"><strong>Проверка.</strong> Откройте страницу на 320, 640, 900 и 1280 px. Меню и блоки перестраиваются на нужной ширине, текст переносится, горизонтальной прокрутки нет.</p>
       <div class="lab-stage task-10">
-        <!-- 10. Соберите мини-страницу здесь. -->
+        <div class="workshop">
+          <header id="ws-top">
+            <h3 class="ws-title">Мастерская «Глина и огонь»</h3>
+            <nav class="ws-menu">
+              <a href="#ws-top">Главная</a>
+              <a href="#ws-about">О нас</a>
+              <a href="#ws-classes">Занятия</a>
+            </nav>
+          </header>
+
+          <section class="ws-intro" id="ws-about">
+            <img src="mountains.svg" alt="Горный пейзаж">
+            <div>
+              <h4>О нас</h4>
+              <p>Гончарная мастерская для взрослых и детей.</p>
+            </div>
+          </section>
+
+          <section class="ws-classes" id="ws-classes">
+            <article class="ws-card">
+              <h4>Гончарный круг</h4>
+              <p>Занятие на два часа.</p>
+            </article>
+            <article class="ws-card">
+              <h4>Ручная лепка</h4>
+              <p>Лепим тарелки, кружки и фигурки из пласта и жгутов, учимся соединять детали и выбираем глазурь для обжига.</p>
+            </article>
+            <article class="ws-card">
+              <h4>Роспись</h4>
+              <p>Краски и штампы.</p>
+            </article>
+          </section>
+        </div>
       </div>
     </section>
   </main>
